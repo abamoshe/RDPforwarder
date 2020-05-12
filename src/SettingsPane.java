@@ -2,6 +2,7 @@ import javafx.beans.binding.Bindings;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -46,7 +47,8 @@ public class SettingsPane {
         hBoxHost.setAlignment(Pos.CENTER_RIGHT);
 
         tfPassword = new TextField();
-        Button btFileDialog = new Button("open");
+        Button btFileDialog = new Button();
+        btFileDialog.setGraphic(new ImageView("/file_dialog.png"));
         rdKeyFile = new RadioButton("Privet Key");
         rdPassword = new RadioButton("Password");
         new ToggleGroup().getToggles().addAll(rdKeyFile, rdPassword);

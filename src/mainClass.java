@@ -7,6 +7,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
@@ -41,6 +42,7 @@ public class mainClass extends Application {
         HBox.setHgrow(regionSpacer, Priority.ALWAYS);
 
         Button buttonSettings = new Button("Settings");
+        buttonSettings.setGraphic(new ImageView("/settings_image.png"));
 
         Label labelPort = new Label("Port_____");
         TextField textFieldPort = new TextField();
