@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="remote_desktop">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/out/artifacts/remote_desktop_jar/remote_desktop.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
