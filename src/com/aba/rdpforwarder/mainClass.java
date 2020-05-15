@@ -71,6 +71,13 @@ public class mainClass extends Application {
         primaryStage.setScene(new Scene(vBoxMain));
         primaryStage.setTitle("RDP forwarder");
         primaryStage.getIcons().add(new Image("/RDPforwarder_icon.png"));
+        primaryStage.setOnCloseRequest(event -> {
+            try {
+                processConnected.destroy();
+            } catch (Exception e) {
+            }
+            System.exit(0);
+        });
 
         hBox1.disableProperty().bind(isConnected);
         labelConnected.textProperty().bind(Bindings.when(isConnected).then("Connected").otherwise("Disconnected"));
